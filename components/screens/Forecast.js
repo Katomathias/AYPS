@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, ImageBackground, ScrollView } from 'react-native';
 import * as Location from 'expo-location'; // Importing Expo Location API
+import { Card } from 'react-native-elements';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 const API_KEY = '200925c7f0d3c72962ec4a19e6c4ad30';
 
@@ -74,6 +76,9 @@ const Forecast = () => {
             {/* Display weather forecast */}
             <Text style={styles.subHeading}>Weather Forecast for Next Few Days</Text>
             {weatherData.forecast.list.map((forecastItem, index) => (
+
+            <Card containerStyle={styles.card1}>
+              
               <View key={index}>
                 <Text style={styles.weatherDate}>
                   Date: {forecastItem.dt_txt}
@@ -87,6 +92,12 @@ const Forecast = () => {
                     
                 {/* Add more forecast details */}
               </View>
+              <FontAwesome 
+                    name="sun-o"
+                    color="#05375a"
+                    size={20}
+                />
+              </Card>
             ))}
           </View>
         )}
@@ -133,7 +144,18 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: 'cover',
     justifyContent: 'center'
-  }
+  },
+  card1: {
+    borderRadius: 10,
+    marginBottom: 16,
+    backgroundColor: '#48764A', // Card background color
+
+    flexDirection: 'row',
+    marginTop: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#f2f2f2',
+    paddingBottom: 5
+  },
 });
 
 export default Forecast;

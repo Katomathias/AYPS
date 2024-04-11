@@ -1,29 +1,56 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image, ImageBackground, SafeAreaView } from 'react-native';
 
 const AboutUs = () => {
   return (
+    <SafeAreaView>
+    <ImageBackground source={require('../../assets/about.jpeg')} style={styles.backgroundImage}>
     <ScrollView contentContainerStyle={styles.container}>
       <Image source={require('../../assets/logo.png')} style={styles.logo} />
       <Text style={styles.title}>About Us</Text>
       <Text style={styles.description}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel
-        fringilla orci. Morbi lacinia augue et quam rhoncus, vitae tincidunt
-        lectus lacinia. Phasellus nec libero eleifend, tempor turpis vitae,
-        venenatis purus. Fusce nec quam nulla. Vivamus vehicula nulla nec
-        fermentum fermentum. Integer non nisl a eros faucibus lacinia.
-      </Text>
+      Welcome to the Agricultural Yield Prediction System (AYPS), a revolutionary mobile application 
+      designed to empower farmers and revolutionize agriculture practices.</Text>
+         <Text style={styles.titlesmall}>Purpose</Text>
+      <Text style={styles.description} >The AYPS aims to assist farmers in enhancing their crop productivity and profitability
+      by delivering accurate and personalized crop yield predictions and recommendations. Leveraging 
+      real-time weather data, historical crop performance data, and farm sensor data, our platform equips 
+      farmers with invaluable insights to optimize crop selection, planting and harvesting schedules, and 
+      resource allocation.</Text>
+
+      <Image source={require('../../assets/farmer.png')} style={styles.logo}/>
+
+      <Text style={styles.titlesmall}>Product Scope</Text>
+
       <Text style={styles.description}>
-        Sed id efficitur odio. Nullam auctor nec sapien ac varius. Pellentesque
-        habitant morbi tristique senectus et netus et malesuada fames ac
-        turpis egestas. Nam efficitur tortor vel purus vulputate, eu
-        sollicitudin libero dapibus. Suspendisse ut sapien nec turpis eleifend
-        sodales. Vestibulum vel nisl ultricies, lacinia dolor id, dignissim
-        dolor. Donec fringilla aliquam est, non efficitur odio dignissim eu.
-        Nullam sed ligula velit.
+       AYPS is a comprehensive solution offering:
+      Crop yield predictions and personalized recommendations based on real-time and historical data.
+      Optimization of crop selection and resource allocation.
+      Enhanced farm efficiency and sustainability through real-time weather and sensor data.
+      Improved decision-making and planning with easy access to historical and current data.
+
+
       </Text>
+      <Image source={require('../../assets/farmer2.jpeg')} style={styles.logo}/>
+
+      <Text style={styles.titlesmall}>Overall Description</Text>
+      
+      <Text style={styles.description}>
+      AYPS is an independent system consisting of:
+      Web and mobile applications for user accessibility. {"\n"}
+      Backend server and database hosting application logic, data, and APIs.{'\n'}
+      Cloud service for accessing external data sources.{'\n'}
+      Farm sensors (soil moisture, temperature, humidity, pH, nutrient) integrated into the system for real-time 
+      monitoring.{'\n'}
+      The AYPS is poised to revolutionize farming practices, contributing to increased crop yields, reduced costs, 
+      and a sustainable agricultural future. {'\n'}   </Text>
+      <Text style={styles.description1}>  Join us in shaping the future of agriculture with AYPS! </Text>
+
+      
       {/* Add more details as needed */}
     </ScrollView>
+    </ImageBackground>
+    </SafeAreaView>
   );
 };
 
@@ -44,10 +71,21 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 10,
   },
+  titlesmall: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
   description: {
     fontSize: 16,
     marginBottom: 20,
     textAlign: 'justify',
+  },
+  description1: {
+    fontSize: 16,
+    marginBottom: 20,
+    textAlign: 'center',
+    color:'blue'
   },
 });
 

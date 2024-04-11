@@ -37,17 +37,17 @@ export default function App() {
 
   return (
     
-    <NavigationContainer >
-      <Stack.Navigator>
-        
-        
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{
+            headerShown: false,
+          }} >
+            
       <Stack.Screen name="Splash" component={SplashScreen} />
+      <Stack.Screen name="RegisterScreen" component={RegisterScreen} />  
       <Stack.Screen name="Signin" component={SignInScreen} /> 
-      <Stack.Screen name="RegisterScreen" component={RegisterScreen} /> 
-
-    
+      <Stack.Screen name="HomeDrawer" component={MainTabScreen} /> 
        {/* <Stack.Screen name="Drawer" component={DrawerContent} />  */}
-       <Stack.Screen name="HomeDrawer" component={MainTabScreen} /> 
+       
         <Stack.Screen name="SupportScreen" component={SupportScreen} />
         
         {/* <Stack.Screen name="Home" component={HomeScreen} /> */}
