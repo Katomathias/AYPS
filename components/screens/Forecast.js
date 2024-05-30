@@ -88,7 +88,7 @@ const Forecast = () => {
                 </Text>
                 <Text style={styles.weatherText}>
                   Temperature: {Math.round(forecastItem.main.temp - 273.15)}°C
-                </Text>
+                </Text>  
                     
                 {/* Add more forecast details */}
               </View>

@@ -2,7 +2,7 @@
 import React from 'react';
 import 'react-native-gesture-handler';
 import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer } from ' ';
 import 'react-native-gesture-handler';
 import HomeScreen from './components/HomeScreen';
 import DataScreen from './components/DataScreen';
@@ -23,6 +23,8 @@ import RegisterScreen from './components/RegisterScreen';
 import Weather from './components/Weather';
 import Forecast from './components/screens/Forecast';
 import AboutUs from './components/screens/AboutUs';
+import ImagePick from './components/screens/ImagePick';
+import ProfileScreen from './components/screens/ProfileScreen';
 // import ContactUs from './components/screens/ContactUs';
 
 
@@ -57,6 +59,9 @@ export default function App() {
         <Stack.Screen name="forecast" component={Forecast} />
         <Stack.Screen name="about" component={AboutUs} />
         {/* <Stack.Screen name="contact" component={ContactUs} /> */}
+        <Stack.Screen name="ImagePick" component={ImagePick} />
+        <Stack.Screen name="Profile" component={ProfileScreen} />
+        
         
     </Stack.Navigator>
     </NavigationContainer>
